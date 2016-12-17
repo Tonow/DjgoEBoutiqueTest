@@ -85,7 +85,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
 
@@ -99,4 +99,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+#Nous indiquons ici où sont stockés les fichiers statiques et comment les atteindre
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    BASE_DIR + '/static/',
+)
+
+#Indiquer les dossiers média
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR + '/media/'
