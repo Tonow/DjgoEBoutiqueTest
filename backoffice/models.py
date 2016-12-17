@@ -14,6 +14,9 @@ class Product(models.Model):
     def __unicode__(self):
         return "{0} [{1}]".format(self.name, self.code)
 
+    def __str__(self):
+        return (self.name, self.code)
+
 
 class ProductItem(models.Model):
     color   = models.CharField(max_length=100)
@@ -22,3 +25,6 @@ class ProductItem(models.Model):
 
     def __unicode__(self):
         return "{0} {{1}} [{2}]".format(self.product.name, self.color, self.code)
+
+    def __str__(self):
+        return (self.product.name, self.color , self.code)
