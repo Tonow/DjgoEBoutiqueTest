@@ -109,3 +109,10 @@ STATICFILES_DIRS = (
 #Indiquer les dossiers média
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR + '/media/'
+
+# Configuration pour le login
+LOGIN_REDIRECT_URL = '/backoffice/'
+LOGIN_URL = '/'
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/',
+)

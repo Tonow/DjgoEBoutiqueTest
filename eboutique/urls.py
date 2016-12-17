@@ -18,5 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$' , 'backoffice.views.home', name='home'),
+    #url(r'^back/' , include('backoffice.urls')),
+    url(r'^$' , include('backoffice.urls')),
+    #url(r'^$' , 'backoffice.views.home', name='home'),
 ]
